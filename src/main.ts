@@ -7,8 +7,8 @@ async function bootstrap() {
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true, // 过滤非法的属性
-      // transform: true, //自动转换
-      // forbidNonWhitelisted:true // 非法属性直接报错
+      transform: true, //自动转换
+      forbidNonWhitelisted: true, // 非法属性直接报错
     }),
   );
   await app.listen(8080);
