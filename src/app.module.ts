@@ -13,8 +13,9 @@ import { ExampleModule } from './example/example.module';
       username: 'root',
       password: 'root',
       database: 'nestjs',
-      entities: [],
+      // entities: [],
       synchronize: true, //不应在生产环境中使用
+      autoLoadEntities: true,
     }),
     ExampleModule,
   ],
