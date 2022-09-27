@@ -7,7 +7,7 @@ export class AppController {
 
   @Get()
   getHello(@Param() params): string {
-    return this.appService.getHello(params);
+    return this.appService.getHello();
   }
   @Post()
   finall(@Body() Body) {
