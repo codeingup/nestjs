@@ -11,8 +11,12 @@ export class ExampleService {
     private readonly coffeeRepository: Repository<Coffee>,
   ) {}
 
-  findAll() {
-    return this.coffeeRepository.find();
+  find(paginationQuery) {
+    return this.coffeeRepository.find({
+        where:{
+          id:paginationQuery.id
+        }
+    });
   }
 
   async findOne(id: number) {
