@@ -8,7 +8,8 @@ import { ExampleModule } from './example/example.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: '192.168.28.3',
+      // host: '192.168.28.3',
+      host:"localhost",
       port: 3306,
       username: 'root',
       password: 'root',

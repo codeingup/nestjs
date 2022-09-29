@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
 
 @Entity()
 export class Coffee {
@@ -11,6 +11,12 @@ export class Coffee {
   @Column()
   type: string;
 
+  @CreateDateColumn()
+  createTime:string
+
+
+  @UpdateDateColumn()
+  updateTime:string
   // @Column('json', { nullable: true })
   // list: string[];
 }
