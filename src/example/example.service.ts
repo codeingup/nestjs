@@ -21,6 +21,7 @@ export class ExampleService {
 
   async findOne(id: number) {
     const coffee = await this.coffeeRepository.find({
+      select:[],
       where: {
         id: id,
       },

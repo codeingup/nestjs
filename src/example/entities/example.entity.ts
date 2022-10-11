@@ -2,20 +2,29 @@ import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateCol
 
 @Entity()
 export class Coffee {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn({
+    comment:"主键，唯一标识"
+  })
   id: number;
 
-  @Column()
+  @Column({
+    comment:'名称'
+  })
   name: string;
 
-  @Column()
+  @Column({
+    comment:"类型"
+  })
   type: string;
 
-  @CreateDateColumn()
+  @CreateDateColumn({
+    comment:"创建时间"
+  })
   createTime:string
 
-
-  @UpdateDateColumn()
+  @UpdateDateColumn({
+    comment:"更新时间"
+  })
   updateTime:string
   // @Column('json', { nullable: true })
   // list: string[];
