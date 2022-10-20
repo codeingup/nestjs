@@ -1,23 +1,21 @@
-import { IsNumber, IsString } from "class-validator"
-
+import { IsEmail, IsNumber, IsString } from 'class-validator';
 
 export class CreateUserDto {
-  
+  @IsString()
+  readonly nickName: string;
 
-    @IsString()
-    readonly nickName:string
+  @IsNumber()
+  readonly sex?: number;
 
-    @IsNumber()
-    readonly sex?:number
+  @IsNumber()
+  readonly phone?: number;
 
-    @IsNumber()
-    readonly phone?:number
+  @IsString()
+  readonly avatarUrl?: string;
 
-    @IsString()
-    readonly avatarUrl?:string
+  @IsString()
+  readonly password: string;
 
-    @IsString()
-    readonly password:string
-
-
+  @IsEmail()
+  readonly email?: string;
 }
