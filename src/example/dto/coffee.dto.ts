@@ -1,15 +1,14 @@
-import { IsNumber, IsString } from 'class-validator';
 import { PartialType } from '@nestjs/mapped-types';
+import { IsNumber, IsString } from 'class-validator';
 export class CreateCoffeeDto {
   @IsString()
   readonly name: string;
 
   @IsString()
   readonly type: string;
-  // @IsString({ each: true })
-  // readonly list: string[];
 }
 export class DeleteCoffeeDto {
+  /** 唯一id */
   @IsNumber()
   readonly id: number;
 }

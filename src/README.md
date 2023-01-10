@@ -6,7 +6,7 @@
     nest g module
 
 # 创建DTO
-    nest g class example/dto/create-coffee.dto --no-specnest
+    nest g class example/dto/coffee.dto --no-specnest
 
 # 安装验证器
     class-validator class-transformer

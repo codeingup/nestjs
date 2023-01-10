@@ -28,11 +28,13 @@ export class ExampleService {
     return coffee;
   }
 
+  /** 查询 */
   async create(createCoffeeDto: CreateCoffeeDto) {
     const coffee = this.coffeeRepository.create(createCoffeeDto);
     return this.coffeeRepository.save(coffee);
   }
 
+  /** 更新 */
   async update(updateCoffeeDto: UpdateCoffeeDto) {
     const coffee = await this.coffeeRepository.preload({
       ...updateCoffeeDto,
@@ -45,6 +47,7 @@ export class ExampleService {
     return this.coffeeRepository.save(coffee);
   }
 
+  /** 删除 */
   async remove(id: number) {
     const coffee = await this.findOne(id);
     return this.coffeeRepository.remove(coffee);
